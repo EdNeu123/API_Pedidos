@@ -4,17 +4,19 @@ Este projeto consiste em uma API RESTful desenvolvida com Node.js, utilizando o 
 
 ## Tecnologias Utilizadas
 
-| Tecnologia | Logo |
-|------------|------|
-| Node.js    | ![Node.js](https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg) |
-| Express    | ![Express](https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png) |
-| Sequelize  | ![Sequelize](https://sequelize.org/img/logo.svg) |
-| MySQL      | ![MySQL](https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg) |
-| JWT        | ![JWT](https://jwt.io/img/pic_logo.svg) |
-| Swagger    | ![Swagger](https://swagger.io/images/swagger-logo.svg) |
-| dotenv     | ![dotenv](https://raw.githubusercontent.com/motdotla/dotenv/main/logo.svg) |
-| bcrypt     | ![bcrypt](https://raw.githubusercontent.com/kelektiv/node.bcrypt.js/develop/logo/bcrypt-logo.png) |
-| cors       | ![CORS](https://avatars.githubusercontent.com/u/23054190?s=200&v=4) |
+## Tecnologias Utilizadas
+
+<p float="left" style="display: flex; gap: 12px; align-items: center;">
+  <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" alt="Node.js" width="40" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" alt="Express" width="40" />
+  <img src="https://sequelize.org/img/logo.svg" alt="Sequelize" width="40" />
+  <img src="https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg" alt="MySQL" width="40" />
+  <img src="https://jwt.io/img/pic_logo.svg" alt="JWT" width="40" />
+  <img src="https://swagger.io/images/swagger-logo.svg" alt="Swagger" width="40" />
+  <img src="https://raw.githubusercontent.com/motdotla/dotenv/main/logo.svg" alt="dotenv" width="40" />
+  <img src="https://raw.githubusercontent.com/kelektiv/node.bcrypt.js/develop/logo/bcrypt-logo.png" alt="bcrypt" width="40" />
+  <img src="https://avatars.githubusercontent.com/u/23054190?s=200&v=4" alt="CORS" width="40" />
+</p>
 
 ## Estrutura de Pastas
 
