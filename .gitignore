@@ -14,13 +14,3 @@ yarn-error.log*
 # Dependency directories
 jspm_packages/
 
-# IDE specific files
-.vscode/
-.idea/
-
-# System files
-.DS_Store
-Thumbs.db
-
-# Readme
-Readme.md 

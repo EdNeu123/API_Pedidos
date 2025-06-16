@@ -1,30 +1,31 @@
-// src/models/index.js
-const User         = require('./user');
-const Category     = require('./category');
-const Product      = require('./product');
-const Order        = require('./order');
-const OrderProduct = require('./orderProduct');
+const Usuario = require('./usuario');
+const Categoria = require('./categoria');
+const Produto = require('./produto');
+const Pedido = require('./pedido');
+const PedidoProduto = require('./pedidoProduto');
 
-// Usuário 1:N Pedidos
-User.hasMany(Order,     { foreignKey: 'userId',   as: 'orders' });
-Order.belongsTo(User,   { foreignKey: 'userId',   as: 'user'   });
+// Associações
+
+// Usuário 1:N Pedido
+Usuario.hasMany(Pedido, { foreignKey: 'usuarioId', as: 'pedidos' });
+Pedido.belongsTo(Usuario, { foreignKey: 'usuarioId', as: 'usuario' });
 
 // Categoria 1:N Produto
-Category.hasMany(Product,    { foreignKey: 'categoryId', as: 'products' });
-Product.belongsTo(Category,  { foreignKey: 'categoryId', as: 'category' });
+Categoria.hasMany(Produto, { foreignKey: 'categoriaId', as: 'produtos' });
+Produto.belongsTo(Categoria, { foreignKey: 'categoriaId', as: 'categoria' });
 
 // Pedido N:N Produto
-Order.belongsToMany(Product, {
-  through: OrderProduct,
-  foreignKey: 'orderId',
-  otherKey:  'productId',
-  as: 'products'
+Pedido.belongsToMany(Produto, {
+  through: PedidoProduto,
+  foreignKey: 'pedidoId',
+  otherKey: 'produtoId',
+  as: 'produtos',
 });
-Product.belongsToMany(Order, {
-  through: OrderProduct,
-  foreignKey: 'productId',
-  otherKey:  'orderId',
-  as: 'orders'
+Produto.belongsToMany(Pedido, {
+  through: PedidoProduto,
+  foreignKey: 'produtoId',
+  otherKey: 'pedidoId',
+  as: 'pedidos',
 });
 
-module.exports = { User, Category, Product, Order, OrderProduct };
+module.exports = { Usuario, Categoria, Produto, Pedido, PedidoProduto };

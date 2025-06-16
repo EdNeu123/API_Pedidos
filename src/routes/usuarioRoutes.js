@@ -1,21 +1,21 @@
 const express = require('express');
-const router  = express.Router();
-const auth    = require('../middleware/authMiddleware');
-const userController = require('../controllers/userController');
+const router = express.Router();
+const auth = require('../middleware/authMiddleware');
+const userController = require('../controllers/usuarioController');
 
 /**
  * @swagger
  * tags:
- *   name: Users
+ *   name: Usuários
  *   description: Operações com usuários
  */
 
 /**
  * @swagger
- * /api/users/register:
+ * /api/usuarios/cadastro:
  *   post:
  *     summary: Cadastra um novo usuário
- *     tags: [Users]
+ *     tags: [Usuários]
  *     requestBody:
  *       required: true
  *       content:
@@ -42,14 +42,13 @@ const userController = require('../controllers/userController');
  *       '409':
  *         description: Email já cadastrado
  */
-router.post('/register', userController.register);
 
 /**
  * @swagger
- * /api/users/login:
+ * /api/usuarios/login:
  *   post:
  *     summary: Login de usuário
- *     tags: [Users]
+ *     tags: [Usuários]
  *     requestBody:
  *       required: true
  *       content:
@@ -62,25 +61,23 @@ router.post('/register', userController.register);
  *             properties:
  *               email:
  *                 type: string
+ *                 example: joao@exemplo.com
  *               password:
  *                 type: string
+ *                 example: senha123
  *     responses:
  *       '200':
  *         description: Retorna token JWT
  *       '401':
  *         description: Credenciais inválidas
  */
-router.post('/login', userController.login);
-
-// Rotas protegidas
-router.use(auth);
 
 /**
  * @swagger
- * /api/users/me:
+ * /api/usuarios/perfil:
  *   get:
  *     summary: Retorna perfil do usuário autenticado
- *     tags: [Users]
+ *     tags: [Usuários]
  *     security:
  *       - bearerAuth: []
  *     responses:
@@ -89,14 +86,13 @@ router.use(auth);
  *       '401':
  *         description: Token ausente ou inválido
  */
-router.get('/me', userController.getProfile);
 
 /**
  * @swagger
- * /api/users/me:
+ * /api/usuarios/perfil:
  *   put:
  *     summary: Atualiza perfil do usuário
- *     tags: [Users]
+ *     tags: [Usuários]
  *     security:
  *       - bearerAuth: []
  *     requestBody:
@@ -115,14 +111,13 @@ router.get('/me', userController.getProfile);
  *       '404':
  *         description: Usuário não encontrado
  */
-router.put('/me', userController.updateProfile);
 
 /**
  * @swagger
- * /api/users/me/password:
+ * /api/usuarios/perfil/senha:
  *   put:
  *     summary: Altera a senha do usuário
- *     tags: [Users]
+ *     tags: [Usuários]
  *     security:
  *       - bearerAuth: []
  *     requestBody:
@@ -142,20 +137,30 @@ router.put('/me', userController.updateProfile);
  *       '401':
  *         description: Senha atual incorreta
  */
-router.put('/me/password', userController.changePassword);
 
 /**
  * @swagger
- * /api/users/me:
+ * /api/usuarios/perfil:
  *   delete:
  *     summary: Deleta conta do usuário
- *     tags: [Users]
+ *     tags: [Usuários]
  *     security:
  *       - bearerAuth: []
  *     responses:
  *       '200':
  *         description: Conta deletada
  */
-router.delete('/me', userController.deleteAccount);
+
+
+router.post('/cadastro', userController.cadastrar);
+router.post('/login', userController.login);
+
+// Rotas protegidas abaixo
+router.use(auth);
+
+router.get('/perfil', userController.perfil);
+router.put('/perfil', userController.atualizarPerfil);
+router.put('/perfil/senha', userController.alterarSenha);
+router.delete('/perfil', userController.deletarConta);
 
 module.exports = router;
