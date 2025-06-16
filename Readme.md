@@ -60,7 +60,7 @@ git clone https://github.com/EdNeu123/API_Pedidos.git
 2. Navegue até a pasta:
 
 ```bash
-cd API_RestFul_JS
+cd API_Pedidos
 ```
 
 3. Instale as dependências:
