@@ -1,4 +1,3 @@
-
 const express = require('express');
 const router = express.Router();
 const categoriaController = require('../controllers/categoriaController');
@@ -21,7 +20,6 @@ const authMiddleware = require('../middleware/authMiddleware');
  *       200:
  *         description: Lista de categorias
  */
-router.get('/', authMiddleware, categoriaController.listarTodas);
 
 /**
  * @swagger
@@ -42,7 +40,6 @@ router.get('/', authMiddleware, categoriaController.listarTodas);
  *       404:
  *         description: Categoria não encontrada
  */
-router.get('/:id', authMiddleware, categoriaController.buscarPorId);
 
 /**
  * @swagger
@@ -65,7 +62,6 @@ router.get('/:id', authMiddleware, categoriaController.buscarPorId);
  *       201:
  *         description: Categoria criada com sucesso
  */
-router.post('/', authMiddleware, categoriaController.criar);
 
 /**
  * @swagger
@@ -95,7 +91,6 @@ router.post('/', authMiddleware, categoriaController.criar);
  *       404:
  *         description: Categoria não encontrada
  */
-router.put('/:id', authMiddleware, categoriaController.atualizar);
 
 /**
  * @swagger
@@ -118,6 +113,11 @@ router.put('/:id', authMiddleware, categoriaController.atualizar);
  *       409:
  *         description: "Não é possível deletar: existem produtos vinculados"
  */
+
+router.get('/', authMiddleware, categoriaController.listarTodas);
+router.get('/:id', authMiddleware, categoriaController.buscarPorId);
+router.post('/', authMiddleware, categoriaController.criar);
+router.put('/:id', authMiddleware, categoriaController.atualizar);
 router.delete('/:id', authMiddleware, categoriaController.deletar);
 
 module.exports = router;

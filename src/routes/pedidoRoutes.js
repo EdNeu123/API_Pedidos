@@ -1,5 +1,3 @@
-// src/routes/pedidoRoutes.js
-
 const express = require('express');
 const router = express.Router();
 const pedidoController = require('../controllers/pedidoController');
@@ -45,7 +43,6 @@ const authMiddleware = require('../middleware/authMiddleware');
  *       500:
  *         description: Erro ao criar pedido
  */
-router.post('/', authMiddleware, pedidoController.criarPedido);
 
 /**
  * @swagger
@@ -61,7 +58,6 @@ router.post('/', authMiddleware, pedidoController.criarPedido);
  *       500:
  *         description: Erro ao buscar pedidos
  */
-router.get('/', authMiddleware, pedidoController.listarPorUsuario);
 
 /**
  * @swagger
@@ -86,7 +82,6 @@ router.get('/', authMiddleware, pedidoController.listarPorUsuario);
  *       500:
  *         description: Erro ao buscar pedido
  */
-router.get('/:id', authMiddleware, pedidoController.buscarPorId);
 
 /**
  * @swagger
@@ -111,6 +106,11 @@ router.get('/:id', authMiddleware, pedidoController.buscarPorId);
  *       500:
  *         description: Erro ao cancelar pedido
  */
+
+
+router.post('/', authMiddleware, pedidoController.criarPedido);
+router.get('/', authMiddleware, pedidoController.listarPorUsuario);
+router.get('/:id', authMiddleware, pedidoController.buscarPorId);
 router.delete('/:id', authMiddleware, pedidoController.cancelarPedido);
 
 module.exports = router;

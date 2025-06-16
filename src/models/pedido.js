@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
 const { db } = require('../config/database');
 
+// Modelo Pedido
 const Pedido = db.define('Pedido', {
   id: {
     type: DataTypes.INTEGER.UNSIGNED,
@@ -11,7 +12,7 @@ const Pedido = db.define('Pedido', {
     type: DataTypes.INTEGER.UNSIGNED,
     allowNull: false,
     references: {
-      model: 'usuarios',
+      model: 'usuarios',                // Chave estrangeira para usuário
       key: 'id',
     },
   },
@@ -19,16 +20,5 @@ const Pedido = db.define('Pedido', {
   tableName: 'pedidos',
   timestamps: true,
 });
-
-Pedido.associate = function(models) {
-  Pedido.belongsTo(models.Usuario, { foreignKey: 'usuarioId', as: 'usuario' });
-
-  Pedido.belongsToMany(models.Produto, {
-    through: models.PedidoProduto,
-    foreignKey: 'pedidoId',
-    otherKey: 'produtoId',
-    as: 'produtos',
-  });
-};
 
 module.exports = Pedido;

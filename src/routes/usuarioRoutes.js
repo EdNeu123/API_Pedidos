@@ -42,7 +42,6 @@ const userController = require('../controllers/usuarioController');
  *       '409':
  *         description: Email já cadastrado
  */
-router.post('/cadastro', userController.cadastrar);
 
 /**
  * @swagger
@@ -59,7 +58,7 @@ router.post('/cadastro', userController.cadastrar);
  *             required:
  *               - email
  *               - password
- *               properties:
+ *             properties:
  *               email:
  *                 type: string
  *                 example: joao@exemplo.com
@@ -72,10 +71,6 @@ router.post('/cadastro', userController.cadastrar);
  *       '401':
  *         description: Credenciais inválidas
  */
-router.post('/login', userController.login);
-
-// Rotas protegidas
-router.use(auth);
 
 /**
  * @swagger
@@ -91,7 +86,6 @@ router.use(auth);
  *       '401':
  *         description: Token ausente ou inválido
  */
-router.get('/perfil', userController.perfil);
 
 /**
  * @swagger
@@ -117,7 +111,6 @@ router.get('/perfil', userController.perfil);
  *       '404':
  *         description: Usuário não encontrado
  */
-router.put('/perfil', userController.atualizarPerfil);
 
 /**
  * @swagger
@@ -144,7 +137,6 @@ router.put('/perfil', userController.atualizarPerfil);
  *       '401':
  *         description: Senha atual incorreta
  */
-router.put('/perfil/senha', userController.alterarSenha);
 
 /**
  * @swagger
@@ -158,6 +150,17 @@ router.put('/perfil/senha', userController.alterarSenha);
  *       '200':
  *         description: Conta deletada
  */
+
+
+router.post('/cadastro', userController.cadastrar);
+router.post('/login', userController.login);
+
+// Rotas protegidas abaixo
+router.use(auth);
+
+router.get('/perfil', userController.perfil);
+router.put('/perfil', userController.atualizarPerfil);
+router.put('/perfil/senha', userController.alterarSenha);
 router.delete('/perfil', userController.deletarConta);
 
 module.exports = router;

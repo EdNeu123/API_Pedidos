@@ -1,33 +1,29 @@
 const { DataTypes } = require('sequelize');
 const { db } = require('../config/database');
 
+// Definição do modelo Usuario
 const Usuario = db.define('Usuario', {
   id: {
-    type: DataTypes.INTEGER,
-    autoIncrement: true,
-    primaryKey: true,
+    type: DataTypes.INTEGER,    // Tipo inteiro
+    autoIncrement: true,        // Auto incrementa a cada novo registro
+    primaryKey: true,           // Chave primária da tabela
   },
   nome: {
-    type: DataTypes.STRING,
-    allowNull: false,
+    type: DataTypes.STRING,     // Campo do tipo string
+    allowNull: false,           // Não permite valor nulo
   },
   email: {
     type: DataTypes.STRING,
     allowNull: false,
-    unique: true,
+    unique: true,               // Garante que o email seja único na tabela
   },
   senha: {
     type: DataTypes.STRING,
     allowNull: false,
   },
 }, {
-  tableName: 'usuarios',
-  timestamps: true,
+  tableName: 'usuarios',        // Nome da tabela no banco
+  timestamps: true,             // Cria campos createdAt e updatedAt automaticamente
 });
-
-// Função para fazer associações
-Usuario.associate = function(models) {
-  Usuario.hasMany(models.Pedido, { foreignKey: 'usuarioId', as: 'pedidos' });
-};
 
 module.exports = Usuario;
