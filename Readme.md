@@ -4,19 +4,16 @@ Este projeto consiste em uma API RESTful desenvolvida com Node.js, utilizando o 
 
 ## Tecnologias Utilizadas
 
-## Tecnologias Utilizadas
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)](https://nodejs.org/)  
+[![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white)](https://expressjs.com/)  
+[![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=flat&logo=sequelize&logoColor=white)](https://sequelize.org/)  
+[![MySQL](https://img.shields.io/badge/MySQL-00758F?style=flat&logo=mysql&logoColor=white)](https://www.mysql.com/)  
+[![JWT](https://img.shields.io/badge/JWT-000000?style=flat&logo=jsonwebtokens&logoColor=white)](https://jwt.io/)  
+[![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=flat&logo=swagger&logoColor=black)](https://swagger.io/)  
+[![dotenv](https://img.shields.io/badge/dotenv-000000?style=flat&logo=dotenv&logoColor=white)](https://github.com/motdotla/dotenv)  
+[![bcrypt](https://img.shields.io/badge/bcrypt-262A2D?style=flat&logo=bcrypt&logoColor=white)](https://github.com/kelektiv/node.bcrypt.js)  
+[![CORS](https://img.shields.io/badge/CORS-61DAFB?style=flat&logo=fastify&logoColor=black)](https://github.com/expressjs/cors)
 
-<p float="left" style="display: flex; gap: 12px; align-items: center;">
-  <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" alt="Node.js" width="40" />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" alt="Express" width="40" />
-  <img src="https://sequelize.org/img/logo.svg" alt="Sequelize" width="40" />
-  <img src="https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg" alt="MySQL" width="40" />
-  <img src="https://jwt.io/img/pic_logo.svg" alt="JWT" width="40" />
-  <img src="https://swagger.io/images/swagger-logo.svg" alt="Swagger" width="40" />
-  <img src="https://raw.githubusercontent.com/motdotla/dotenv/main/logo.svg" alt="dotenv" width="40" />
-  <img src="https://raw.githubusercontent.com/kelektiv/node.bcrypt.js/develop/logo/bcrypt-logo.png" alt="bcrypt" width="40" />
-  <img src="https://avatars.githubusercontent.com/u/23054190?s=200&v=4" alt="CORS" width="40" />
-</p>
 
 ## Estrutura de Pastas
 
