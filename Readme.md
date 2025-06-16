@@ -46,7 +46,7 @@ src/
 
 ## Autenticação
 
-A autenticação é realizada por meio de tokens JWT. Para acessar rotas protegidas, inclua o token JWT no cabeçalho da requisição:
+A autenticação é realizada por meio de tokens JWT. Para acessar rotas protegidas, inclua o token JWT no cabeçalho da requisição:</br>
 Authorization: Bearer <seu_token>
 
 ## Instalação
