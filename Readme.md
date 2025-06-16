@@ -4,15 +4,16 @@ Este projeto consiste em uma API RESTful desenvolvida com Node.js, utilizando o 
 
 ## Tecnologias Utilizadas
 
-[![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)](https://nodejs.org/)  
-[![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white)](https://expressjs.com/)  
-[![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=flat&logo=sequelize&logoColor=white)](https://sequelize.org/)  
-[![MySQL](https://img.shields.io/badge/MySQL-00758F?style=flat&logo=mysql&logoColor=white)](https://www.mysql.com/)  
-[![JWT](https://img.shields.io/badge/JWT-000000?style=flat&logo=jsonwebtokens&logoColor=white)](https://jwt.io/)  
-[![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=flat&logo=swagger&logoColor=black)](https://swagger.io/)  
-[![dotenv](https://img.shields.io/badge/dotenv-000000?style=flat&logo=dotenv&logoColor=white)](https://github.com/motdotla/dotenv)  
-[![bcrypt](https://img.shields.io/badge/bcrypt-262A2D?style=flat&logo=bcrypt&logoColor=white)](https://github.com/kelektiv/node.bcrypt.js)  
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white)](https://expressjs.com/)
+[![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=flat&logo=sequelize&logoColor=white)](https://sequelize.org/)
+[![MySQL](https://img.shields.io/badge/MySQL-00758F?style=flat&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![JWT](https://img.shields.io/badge/JWT-000000?style=flat&logo=jsonwebtokens&logoColor=white)](https://jwt.io/)
+[![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=flat&logo=swagger&logoColor=black)](https://swagger.io/)
+[![dotenv](https://img.shields.io/badge/dotenv-000000?style=flat&logo=dotenv&logoColor=white)](https://github.com/motdotla/dotenv)
+[![bcrypt](https://img.shields.io/badge/bcrypt-262A2D?style=flat&logo=bcrypt&logoColor=white)](https://github.com/kelektiv/node.bcrypt.js)
 [![CORS](https://img.shields.io/badge/CORS-61DAFB?style=flat&logo=fastify&logoColor=black)](https://github.com/expressjs/cors)
+
 
 
 ## Estrutura de Pastas
