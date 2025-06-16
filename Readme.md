@@ -103,8 +103,8 @@ Acesse a documentação interativa da API:
 
 ## Rotas Principais
 
-- `POST /api/users/register` – Cadastro de usuário  
+- `POST /api/users/cadastro` – Cadastro de usuário  
 - `POST /api/users/login` – Login e geração de token  
-- `GET /api/categories` – Listagem de categorias  
-- `POST /api/products` – Cadastro de produto (autenticado)  
-- `POST /api/orders` – Realiza pedido (autenticado)  
+- `GET /api/categorias` – Listagem de categorias  
+- `POST /api/produtos` – Cadastro de produto (autenticado)  
+- `POST /api/pedidos` – Realiza pedido (autenticado)  
