@@ -1,6 +1,5 @@
-# API RESTful com Node.js, Express, Sequelize, JWT e Swagger
-
-Este projeto consiste em uma API RESTful desenvolvida com Node.js, utilizando o framework Express, Sequelize como ORM, autenticação baseada em JWT e documentação gerada com Swagger.
+# API RESTful para controle de pedidos
+Este projeto consiste em uma API RESTful para controle de pedidos e produtos, desenvolvida com Node.js, utilizando o framework Express, Sequelize como ORM, autenticação baseada em JWT e documentação gerada com Swagger.
 
 ## Tecnologias Utilizadas
 
